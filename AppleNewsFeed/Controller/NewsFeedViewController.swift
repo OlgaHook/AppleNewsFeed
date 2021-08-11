@@ -44,6 +44,7 @@ class NewsFeedViewController: UIViewController {
     }
     
     @IBAction func getDataTapped(_ sender: Any) {
+        self.activityIndicator(animated: true)
         handleGetData()
     }
     
@@ -73,6 +74,8 @@ class NewsFeedViewController: UIViewController {
             do{
                 if let dictionaryData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{
                     print("dictionaryData: ", dictionaryData)
+                    self.populateData(dictionaryData)
+                    
                 }
             }catch{
                 
@@ -81,6 +84,18 @@ class NewsFeedViewController: UIViewController {
         //to call the session
         task.resume()
         
+    }
+    //(_) -> no name
+    func populateData(_ dictionary: [String: Any]){
+        guard  let responseDict = dictionary["articles"] as? [Gloss.JSON] else {
+            return
+     }
+        items = [Item].from(jsonArray: responseDict) ?? []
+     
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.activityIndicator(animated: false)
+        }
     }
     
     
@@ -101,7 +116,20 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
+        let item = items[indexPath.row]
+        cell.newsTitleLabel.text = item.title
+        cell.newsTitleLabel.numberOfLines = 0
+        
+        if let image = item.image{
+            cell.newsImageView.image = image
+        }
+        //self.title
+        
+        
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     
