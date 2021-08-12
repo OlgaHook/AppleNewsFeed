@@ -22,7 +22,7 @@ class Item: JSONDecodable {
     required init?(json: JSON) {
         //if description is not a String, well present ""
         self.description = "description" <~~ json ?? ""
-        self.title = "title " <~~ json ?? ""
+        self.title = "title" <~~ json ?? ""
         self.url = "url" <~~ json ?? ""
         self.urlToImage = "urlToImage" <~~ json ?? ""
         self.publishedAt = "publishedAt" <~~ json ?? ""

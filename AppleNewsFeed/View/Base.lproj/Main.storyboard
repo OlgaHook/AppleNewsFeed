@@ -35,7 +35,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-v0-G4B">
                                                     <rect key="frame" x="16" y="15.5" width="343" height="238"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3J-eU-xWi">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3J-eU-xWi">
                                                             <rect key="frame" x="0.0" y="0.0" width="193" height="238"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="238" id="H4f-Lp-RX8"/>
@@ -120,11 +120,11 @@
             </objects>
             <point key="canvasLocation" x="1537" y="789"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Apple News-->
         <scene sceneID="DeH-YU-2iG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e5E-Qp-L3Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="newspaper.fill" catalog="system" id="hW3-ie-oZv"/>
+                    <tabBarItem key="tabBarItem" title="Apple News" image="newspaper.fill" catalog="system" id="hW3-ie-oZv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wzi-Fk-6ep">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -157,11 +157,11 @@
             </objects>
             <point key="canvasLocation" x="-257" y="450"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Saved-->
         <scene sceneID="2eJ-T2-S5M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yc3-hL-LaA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="folder.circle" catalog="system" id="F2Z-Bu-Nui"/>
+                    <tabBarItem key="tabBarItem" title="Saved" image="folder.circle" catalog="system" id="F2Z-Bu-Nui"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kh2-5j-bvB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
