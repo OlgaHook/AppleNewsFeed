@@ -49,7 +49,7 @@ class NewsFeedViewController: UIViewController {
     }
     
     func handleGetData(){
-        let jsonUrl = "https://newsapi.org/v2/everything?q=apple&from=2021-08-11&to=2021-08-11&sortBy=popularity&apiKey=8b14d98abae14dd9ac3e37adbd3d60f5"
+        let jsonUrl = "https://newsapi.org/v2/everything?q=apple&from=2021-08-13&to=2021-08-11&sortBy=popularity&apiKey=8b14d98abae14dd9ac3e37adbd3d60f5"
         
         guard let url = URL(string: jsonUrl) else {return}
         
@@ -59,11 +59,11 @@ class NewsFeedViewController: UIViewController {
         
         let sessionUrl = URLSession(configuration: .default)
         let task = sessionUrl.dataTask(with: urlRequest) { data, response, err in
+            print("response:", response as Any)
             
             if let err = err {
                 self.basicAlert(title: "Error!", message: "\(err.localizedDescription)")
             }
-            
             guard let data = data else {
                 
                 self.basicAlert(title: "Error!", message: "Something went wrong, no data")
@@ -131,6 +131,23 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource{
         return 100
     }
     
-    
-    
+    //clicking on cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         //not using segue
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let vc = storyboard.instantiateViewController(identifier: "ArticleDetailViewController") as? ArticleDetailViewController else {
+            return
+        }
+        let item = items[indexPath.row]
+        vc.contentString = item.description
+        vc.titleString = item.title
+        vc.webUrlString = item.url
+        vc.newsImage = item.image
+        
+        //to present Modally
+       //present(vc, animated: true, completion: nil)
+        
+        //to present Navigation Controller together with selected News cell
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

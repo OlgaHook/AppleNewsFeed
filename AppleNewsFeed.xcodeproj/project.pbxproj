@@ -18,6 +18,8 @@
 		B4B8A3FF26C406A800BCFADE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3FE26C406A800BCFADE /* NewsTableViewCell.swift */; };
 		B4B8A40126C4106A00BCFADE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A40026C4106A00BCFADE /* Item.swift */; };
 		B4B8A40426C4152C00BCFADE /* Gloss in Frameworks */ = {isa = PBXBuildFile; productRef = B4B8A40326C4152C00BCFADE /* Gloss */; };
+		B4D7DCEE26C61695004B6CFE /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7DCED26C61695004B6CFE /* ArticleDetailViewController.swift */; };
+		B4D7DCF026C62117004B6CFE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D7DCEF26C62117004B6CFE /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B4B8A3FC26C3FAAE00BCFADE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B4B8A3FE26C406A800BCFADE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		B4B8A40026C4106A00BCFADE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B4D7DCED26C61695004B6CFE /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		B4D7DCEF26C62117004B6CFE /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				B4B8A3E426C3F21100BCFADE /* NewsFeedViewController.swift */,
+				B4D7DCEF26C62117004B6CFE /* WebViewController.swift */,
+				B4D7DCED26C61695004B6CFE /* ArticleDetailViewController.swift */,
 				B4B8A3FE26C406A800BCFADE /* NewsTableViewCell.swift */,
 			);
 			path = Controller;
@@ -198,11 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B8A3E526C3F21100BCFADE /* NewsFeedViewController.swift in Sources */,
+				B4D7DCF026C62117004B6CFE /* WebViewController.swift in Sources */,
 				B4B8A3EB26C3F21200BCFADE /* AppleNewsFeed.xcdatamodeld in Sources */,
 				B4B8A3FF26C406A800BCFADE /* NewsTableViewCell.swift in Sources */,
 				B4B8A3E126C3F21100BCFADE /* AppDelegate.swift in Sources */,
 				B4B8A40126C4106A00BCFADE /* Item.swift in Sources */,
 				B4B8A3FD26C3FAAE00BCFADE /* Alert.swift in Sources */,
+				B4D7DCEE26C61695004B6CFE /* ArticleDetailViewController.swift in Sources */,
 				B4B8A3E326C3F21100BCFADE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
