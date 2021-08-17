@@ -13,10 +13,15 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var urlString = String()
     @IBOutlet weak var webView: WKWebView!
     
-
+    @IBAction func closeWebVieButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Web"
+        
+        
         
         guard let url = URL(string: urlString) else {
             return

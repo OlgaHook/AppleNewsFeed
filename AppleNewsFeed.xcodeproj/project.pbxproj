@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B47862E326CA2B9800D1E03F /* SavedNevsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47862E226CA2B9800D1E03F /* SavedNevsTableViewController.swift */; };
 		B4B8A3E126C3F21100BCFADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3E026C3F21100BCFADE /* AppDelegate.swift */; };
 		B4B8A3E326C3F21100BCFADE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3E226C3F21100BCFADE /* SceneDelegate.swift */; };
 		B4B8A3E526C3F21100BCFADE /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A3E426C3F21100BCFADE /* NewsFeedViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B47862E226CA2B9800D1E03F /* SavedNevsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNevsTableViewController.swift; sourceTree = "<group>"; };
 		B4B8A3DD26C3F21100BCFADE /* AppleNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B8A3E026C3F21100BCFADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B8A3E226C3F21100BCFADE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				B4B8A3E426C3F21100BCFADE /* NewsFeedViewController.swift */,
 				B4D7DCEF26C62117004B6CFE /* WebViewController.swift */,
 				B4D7DCED26C61695004B6CFE /* ArticleDetailViewController.swift */,
+				B47862E226CA2B9800D1E03F /* SavedNevsTableViewController.swift */,
 				B4B8A3FE26C406A800BCFADE /* NewsTableViewCell.swift */,
 			);
 			path = Controller;
@@ -212,6 +215,7 @@
 				B4B8A3FD26C3FAAE00BCFADE /* Alert.swift in Sources */,
 				B4D7DCEE26C61695004B6CFE /* ArticleDetailViewController.swift in Sources */,
 				B4B8A3E326C3F21100BCFADE /* SceneDelegate.swift in Sources */,
+				B47862E326CA2B9800D1E03F /* SavedNevsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

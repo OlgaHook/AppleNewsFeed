@@ -7,6 +7,8 @@
 
 import UIKit
 import Gloss
+import WebKit
+
 
 class NewsFeedViewController: UIViewController {
     //First(!) drag from table view and connect as dataSource and as delegate!!
@@ -24,6 +26,8 @@ class NewsFeedViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Apple News"
         activityIndicatorView.isHidden = true
+        //to avoid news request pressing any time -> addes hangleGetData()
+        handleGetData()
     }
     
     func activityIndicator(animated: Bool){

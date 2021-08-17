@@ -201,7 +201,7 @@
         <!--Web View Controller-->
         <scene sceneID="ddf-8S-8Dw">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="OlF-B7-pHK" customClass="WebViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" hidesBottomBarWhenPushed="YES" id="OlF-B7-pHK" customClass="WebViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ubw-eE-utu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,14 +214,36 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68V-x0-vVP">
+                                <rect key="frame" x="329" y="62" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="5TJ-pk-OPZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Itm-PS-wm1"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeWebVieButtonTapped:" destination="OlF-B7-pHK" eventType="touchUpInside" id="kLz-2F-nzN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjS-jA-QOn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="68V-x0-vVP" firstAttribute="leading" secondItem="XjS-jA-QOn" secondAttribute="leading" constant="329" id="3ko-Rc-5Gb"/>
                             <constraint firstItem="Qbd-bt-7eW" firstAttribute="top" secondItem="XjS-jA-QOn" secondAttribute="top" constant="-44" id="6Ou-oU-mmI"/>
+                            <constraint firstItem="68V-x0-vVP" firstAttribute="top" secondItem="XjS-jA-QOn" secondAttribute="top" constant="62" id="9lN-2X-IMB"/>
                             <constraint firstItem="Qbd-bt-7eW" firstAttribute="leading" secondItem="XjS-jA-QOn" secondAttribute="leading" id="Thj-pW-bdg"/>
                             <constraint firstItem="XjS-jA-QOn" firstAttribute="bottom" secondItem="Qbd-bt-7eW" secondAttribute="bottom" constant="-34" id="ZYW-gb-vjw"/>
                             <constraint firstItem="XjS-jA-QOn" firstAttribute="trailing" secondItem="Qbd-bt-7eW" secondAttribute="trailing" id="qvm-Hf-2M4"/>
+                            <constraint firstItem="XjS-jA-QOn" firstAttribute="trailing" secondItem="68V-x0-vVP" secondAttribute="trailing" constant="16" id="v6C-W0-6dA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -230,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Roo-hi-w5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3005.7971014492755" y="80.357142857142847"/>
+            <point key="canvasLocation" x="3005.5999999999999" y="79.610194902548727"/>
         </scene>
         <!--Apple News-->
         <scene sceneID="DeH-YU-2iG">
@@ -241,6 +263,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wzi-Fk-6ep">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -279,6 +302,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kh2-5j-bvB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.493000567" green="0.1000114605" blue="0.8925574422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -289,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="806" y="788"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Saved Nevs Table View Controller-->
         <scene sceneID="tPq-Xb-rEK">
             <objects>
-                <tableViewController id="xQz-C8-wBy" sceneMemberID="viewController">
+                <tableViewController id="xQz-C8-wBy" customClass="SavedNevsTableViewController" customModule="AppleNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Hr-KA-XeV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,6 +357,10 @@
                                         <constraint firstItem="4Tc-fD-SUf" firstAttribute="centerY" secondItem="9fM-K9-x2q" secondAttribute="centerY" id="itD-ST-ocw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsImageView" destination="9YR-Gv-Sxz" id="B6I-BB-wIS"/>
+                                    <outlet property="newsTitleLabel" destination="uyM-W1-hSY" id="jbI-l7-1fJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -341,8 +369,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xzU-Fs-QDB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Xer-r4-5WQ"/>
+                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="Xer-r4-5WQ">
+                            <connections>
+                                <action selector="infoButtonTapped:" destination="xQz-C8-wBy" id="3gl-3j-lal"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="VT7-Sp-KFX">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="xQz-C8-wBy" id="IoF-c2-u0k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButtonLabel" destination="VT7-Sp-KFX" id="SYJ-Yn-jQ8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKh-tf-Z6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,6 +391,7 @@
     </scenes>
     <resources>
         <image name="folder.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
@@ -359,6 +400,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -76,6 +76,7 @@ class ArticleDetailViewController: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //destination type of Webcontroller
         let destination: WebViewController = segue.destination as! WebViewController
         destination.urlString = webUrlString
         
