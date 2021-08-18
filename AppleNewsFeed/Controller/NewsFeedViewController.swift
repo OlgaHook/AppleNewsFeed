@@ -138,6 +138,7 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource{
     //clicking on cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          //not using segue
+        //Main storyboard need to accesed 
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let vc = storyboard.instantiateViewController(identifier: "ArticleDetailViewController") as? ArticleDetailViewController else {
             return
